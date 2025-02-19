@@ -1,0 +1,43 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #0d0d0d;
+    overflow: hidden;
+}
+.loader {
+    position: relative;
+    width: 100px;
+    height: 100px;
+}
+.loader span {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    border: 5px solid transparent;
+    border-top: 5px solid #00ffcc;
+    border-radius: 50%;
+    animation: spin 1.5s linear infinite;
+}
+.loader span:nth-child(2) {
+    border-top-color: #ff00ff;
+    animation-duration: 2s;
+}
+.loader span:nth-child(3) {
+    border-top-color: #ffcc00;
+    animation-duration: 2.5s;
+}
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+@keyframes fade {
+    0% { opacity: 0.3; }
+    100% { opacity: 1; }
+}
